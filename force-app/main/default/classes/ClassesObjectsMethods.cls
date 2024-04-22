@@ -140,16 +140,22 @@ public with sharing class ClassesObjectsMethods {
         List<String> scientistNames = new List<String>{'Tim Berners-Lee', 'Alan Turing', 'Grace Hopper', 'Donald Knuth', 'Guido van Rossum', 'Ken Thompson', 'Stephen Hawking'};
 
         // The variable to store the concatenated string
+        List<String> ScientistG = new List<String>();
 
         // Loop through the list of scientists' names
-
+        for (String Scientists : scientistNames) {
+            if (Scientists.toLowerCase().contains('g')) {
+                ScientistG.add(Scientists);
+            }
+    
+}
             // If the name doesn't contain the letter 'G', skip this iteration
 
             // Add the name to the result string, followed by a comma
 
         // Remove the last comma from the result string
 
-        return null; // Replace null with the variable you used to store the result
+        return String.join(ScientistG,','); // Replace null with the variable you used to store the result
     }
 
     /**
@@ -307,19 +313,18 @@ public with sharing class ClassesObjectsMethods {
         List<Book> bookList = new List<Book>();
         
         // Update the title and author of myBook1
-        for(integer i = 0; i < bookList.size(); i++ ) {
         myBook1.title = 'Harry Potter and the Chamber of Secrets';
         myBook1.author = 'J.K. Rowling';
         myBook1.pages = 352;
-    }
+    
         // Update the pages for myBook1 to 352
         // Create a new Book object with title "A Brief History of Time" and author "Stephen Hawking"
-        Book myBook2 = new Book('A Brief History of Time', 'Stephen Hawking');
+        Book Book2 = new Book('A Brief History of Time', 'Stephen Hawking');
         // Update the pages for A Brief History of Time to 256
-        myBook2.pages = 256;
+        Book2.pages = 256;
         // Add the book to the list
         bookList.add(myBook1);
-        bookList.add(myBook2);
+        bookList.add(Book2);
         return bookList; // Replace null with the variable you used to store the result      
     }
 
